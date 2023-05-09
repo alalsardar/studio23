@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Studio23</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style> 
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td
+    {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent
+    }
+
+    ol,ul{
+        list-style:none
+    }
+    blockquote,q{
+        quotes:none}
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after{
+        content:'';content:none
+    }:focus{
+        outline:0
+    }
+    ins{
+        text-decoration:none
+    }
+    del{
+        text-decoration:line-through
+    }
+    table{
+        border-collapse:collapse;border-spacing:0
+    }
+    input,select,img,iframe{
+        vertical-align: middle;
+    }
+    html{
+        font-size:125%;
+    }
+    h1,h2,h3,h4,h5,h6 
+    {
+        font-weight:400
+    } 
+    .lang-item-fr {
+    display:none;
+    }
+    .lang-item-de:before {
+    content:none !important;
+    } 
+
+    #hExperiencesLayer {
+        flex: 1;
+        height: 650px;
+        min-width: 35vw;
+        display: none !important;
+    }
+
+    #clocks{
+        display: none !important;
+    }
+</style>
+
+<script> 
+
+    window.onpageshow = function(event) {
+        if (event.persisted) {
+        window.location.reload();
+        }
+    };
+
+function is_touch_enabled() {
+return ( 'ontouchstart' in window ) ||
+( navigator.maxTouchPoints > 0 ) ||
+( navigator.msMaxTouchPoints > 0 );
+} 
+var scrollLayer;
+var current = 'index';
+var lang = 'en';
+var isMobile = window.innerWidth <= 960;
+var isTouchEnabled = is_touch_enabled();
+if(isTouchEnabled) {
+window.document.getElementsByTagName( 'html' )[0].classList.add('is-touch');
+}
+if(isMobile) {
+window.document.getElementsByTagName( 'html' )[0].classList.add('is-mobile');
+}
+
+</script> 
+
+<script> 
+    window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DL0CNQBZ32'); 
+</script> 
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel='stylesheet'>
+<link rel='stylesheet' href='assets/css/locomotive-scroll.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='assets/css/style.min.css' type='text/css' media='all' /> 
+<script type='text/javascript' src='assets/js/jquery.min.js'></script>
+
+<body >
+    <header>
+        <div id="leftHeader">
+            <!-- <div id="mainMenuController" class="menuController relative" data-disabled="true">  
+                <div class="menuLines">
+                    <i class="fa-solid fa-bars no_width has_transition_1000_inout"></i>
+                </div>
+            </div>  -->
+            <a id="mainLogo" class="dark urlManager hidden has_transition_1500" href="#" data-disabled="true"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854.56 135.26"> 
+                <defs> 
+                    <g id="caLogo"> 
+                        <img src="./assets/img/logo.png" width="100%">
+                    </g> 
+                </defs> 
+
+                <use class="fillColor quickColor" x="0" y="0" xlink:href="#caLogo" /> </svg> 
+            </a>
+            <div class="langsContainer has_transition_1500 mobileHidden">
+                <ul class="langs cWhite">
+                    <li class="lang-item lang-item-2 lang-item-en current-lang lang-item-first">
+                        <a lang="en-US" hreflang="en-US" href="#">Home</a>
+                    </li>
+                    <li class="lang-item lang-item-7 lang-item-it">
+                        <a lang="it-IT" hreflang="it-IT" href="#">Room</a>
+                    </li>
+                    <li class="lang-item lang-item-12 lang-item-de">
+                        <a lang="de-DE" hreflang="de-DE" href="#">About</a>
+                    </li>
+                    <li class="lang-item lang-item-17 lang-item-fr">
+                        <a lang="fr-FR" hreflang="fr-FR" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="rightHeader"> 
+            <a class="fb has_transition_1500 headerButton" target="_blank"  href="https://www.facebook.com/" data-disabled="true"> 
+
+                <svg class="circlePath mobileHidden has_transition_1000 d400" xmlns=""><circle class="has_transition_1000 transition_all fillColor" cx="19" cy="19" r="18" stroke-width="1.3" fill="transparent"></circle></svg> 
+                <i class="fa-brands fa-facebook has_transition_1000 d500 icon"></i>
+            </a> 
+
+                <a class="ig has_transition_1500 headerButton d50" target="_blank" href="http://youtube.com" data-disabled="true"> 
+                    <svg class="circlePath mobileHidden has_transition_1000 d200">
+                        <circle class="has_transition_1000 transition_all fillColor" cx="19" cy="19" r="18" stroke-width="1.3" fill="transparent"></circle></svg> 
+                        <i class="fa-brands fa-square-youtube fillColor transition_all has_transition_1000 d300 icon"></i>
+                    </a> 
+                    <a href="tel:+8801700000000" target="_blank" class="mobile has_transition_1500 headerButton d100" data-disabled="true"> 
+                        <i class="fa-solid fa-phone-volume icon has_transition_1000 fillColor transition_all has_transition_1000"></i>
+                    </a> 
+
+                    <a href="mailto:info@stdio23..com" target="_blank" class="email has_transition_1500 headerButton d150" data-disabled="true"> 
+                        <i class="fa-solid fa-envelope icon has_transition_1000 d100 fillColor transition_all has_transition_1000"></i>
+                        <svg class="circlePath mobileHidden has_transition_1000" xmlns="">
+                            <circle class="has_transition_1000 transition_all fillColor" cx="19" cy="19" r="18" stroke-width="1.3" fill="transparent"></circle></svg> 
+                        </a>
+                        <div id="bookNow" class="oButton whiteArrow has_transition_1500 top_ultralow" data-disabled="true"> 
+                            <!-- <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve">  -->
+                                <!-- <defs> 
+                                    <g id="outerShape"> 
+                                        <path class="fill has_transition_1000 transition_all" fill="#FFFFFF" d="M0,1l36.8,0v0c9.9,0,17.9,8,17.9,17.9c0,9.9-8,17.9-17.9,17.9v0H0v0V1z"/> 
+                                        <path stroke-width="1" d="M36.85,0L36.85,0L0,0v0v1V0.97h36.85V1c9.88,0,17.93,8.04,17.93,17.93c0,9.88-8.04,17.92-17.93,17.92v0.03H0v-0.03v1v0
+                                        h36.85v0c10.44,0,18.93-8.49,18.93-18.92C55.78,8.49,47.29,0,36.85,0z"/> 
+                                    </g> 
+                                </defs> <use x="0" y="0" xlink:href="#outerShape" /> </svg> -->
+                                <!-- <div class="oContent">
+                                    <div class="oBackground has_transition_1000 transition_all">
+
+                                    </div>
+                                    <div class="oLabelContainer no_overflow">
+                                        <span class="oLabel top_hidden has_transition_1000 block cBrown d200 transition_all">book now</span>
+                                    </div>
+                                </div> -->
+                             <!--    <div class="oSymbol"> 
+                                    <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <defs> 
+                                        <path id="buttonArrow" d="M14.29,0.62c-0.1-0.24-0.3-0.44-0.54-0.54C13.63,0.03,13.5,0,13.37,0H2.95c-0.55,0-1,0.45-1,1s0.45,1,1,1h8.01L0.29,12.66
+                                        c-0.39,0.39-0.39,1.02,0,1.41c0.2,0.2,0.45,0.29,0.71,0.29s0.51-0.1,0.71-0.29L12.37,3.41v8.01c0,0.55,0.45,1,1,1s1-0.45,1-1V1
+                                        C14.37,0.87,14.34,0.74,14.29,0.62z"/> </defs> 
+                                        <use x="0" y="0" xlink:href="#buttonArrow" /> </svg>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </header>
+
+<div id="brownies" class="has_transition_1500" data-disabled="true" >
+  <!--   <div id="cookieBrownie" class="closed brownie relative has_transition_800">
+        <div class="brownieBack"></div>
+            <div class="brownieContentLayer">
+                <div class="brownieIcoContainer hidden has_transition_1500">
+                    <div class="brownieIco has_transition_800"> 
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35.02 16.5" style="enable-background:new 0 0 35.02 16.5;" xml:space="preserve"> 
+                            <path class="fillColor has_transition_1000 transition_all" d="M22.76,12.71c0.01,0.01,0.02,0.02,0.03,0.03c0.01,0.01,0.02,0.02,0.03,0.03c0.01,0.01,0.03,0.02,0.04,0.03
+                        c0.02,0.02,0.04,0.03,0.06,0.05c0.03,0.02,0.06,0.03,0.09,0.05c0.02,0.01,0.04,0.02,0.06,0.03c0.03,0.01,0.07,0.02,0.11,0.03
+                        c0.02,0,0.03,0.01,0.05,0.01C23.29,12.99,23.35,13,23.4,13c0,0,0,0,0,0c0,0,0,0,0,0c0.05,0,0.11-0.01,0.16-0.02
+                        c0.02,0,0.03-0.01,0.05-0.01c0.04-0.01,0.07-0.02,0.11-0.03c0.02-0.01,0.04-0.02,0.06-0.03c0.03-0.02,0.06-0.03,0.09-0.05
+                        c0.02-0.01,0.04-0.03,0.06-0.04c0.01-0.01,0.03-0.02,0.04-0.03c0.01-0.01,0.02-0.02,0.03-0.03c0.01-0.01,0.02-0.02,0.03-0.03
+                        L34.3,1.43c0.32-0.35,0.29-0.89-0.06-1.21c-0.35-0.32-0.89-0.29-1.21,0.06l-9.62,10.58L15.7,2.21c-0.31-0.35-0.86-0.38-1.21-0.07
+                        c-0.35,0.31-0.38,0.86-0.07,1.21L22.76,12.71z"/> 
+                        <path class="svgLine fillColor has_transition_1000 transition_all" d="M34.52,15.5H0.5C0.22,15.5,0,15.72,0,16s0.22,0.5,0.5,0.5h34.02c0.28,0,0.5-0.22,0.5-0.5
+                        S34.8,15.5,34.52,15.5z"/> </svg>
+                    </div>
+                </div>
+
+        <div class="brownieContent has_transition_800">
+            <div class="brownieTitle cWhite">
+                <span>Cookies</span>
+            </div>
+            <div class="brownieText  cWhite">
+                <p> uses its own and third-party technical and profiling cookies for its functionality and to send you advertising and information in line with your preferences. <br /> To consent to the use of cookies click on the accept button. <br /> If you want to know more, read our extended privacy policy.</p>
+            </div>
+            <div class="cookiePrefs">
+                <div class="brownieText cWhite">Please select cookies for which you want to express consent:</div>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="gdprEssential" value="essential" checked="checked" disabled="disabled"><label for="gdprEssential" title="This type of cookie allows the correct operation of certain sections of the Website. These cookies, always sent from our domain, are necessary to view the site correctly and in relation to the technical services offered, will therefore always be used and sent, unless the user does not change the settings in your browser (thus disrupting the display of pages of the site).">Essentials</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="gdprAnalytics" value="analytics">
+                            <label for="gdprAnalytics" title="Cookies in this category are used to collect information on the use of the site. www.casangelina.com will use this information in respect of anonymous statistical analysis in order to improve the use of the Site and to make the content more interesting and relevant to the wishes of users.">Analytics</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="gdprMarketing" value="marketing">
+                            <label for="gdprMarketing" title="These cookies are necessary to create user profiles in order to send advertising messages in line with the preferences expressed by the user within the pages of the Site.">Profiling</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="brownieButtons show">
+                    <div class="brownieButton accept cWhite">ACCEPT COOKIES
+                        <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve">
+                            <use x="0" y="0" xlink:href="#buttonArrow" /></svg>
+                        </div>
+                        <div class="brownieButton customize  cWhite">CUSTOMIZE PREFERENCES<svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve">
+                        <use x="0" y="0" xlink:href="#buttonArrow" /></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+<div id="newsLetterBrownie" class="closed brownie relative has_transition_800 ">
+   <!--  <div class="brownieBack has_transition_800 transition_all">
+        
+    </div> -->
+    <div class="brownieContentLayer">
+      <!--   <div class="brownieIcoContainer hidden has_transition_1500" >
+            <div class="brownieIco has_transition_800"> 
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 21.01 15" style="enable-background:new 0 0 21.01 15;" xml:space="preserve"> <path class="fillColor has_transition_1000 transition_all" d="M20.8,4.89c-0.29,0-0.53,0.24-0.53,0.53v8.51H1.06V1.81l9.2,9.2c0.1,0.1,0.22,0.14,0.3,0.15
+c0.2,0.04,0.37-0.02,0.5-0.14L21.24,0.82c0.09-0.09,0.09-0.26,0.09-0.29c0-0.04,0-0.07-0.01-0.11l-0.03-0.1c0,0,0-0.01,0-0.01
+l-0.05-0.09l-0.02-0.02c-0.07-0.08-0.15-0.15-0.26-0.18l-0.01-0.01C20.87,0,20.83,0,20.8,0h-0.54H3.16H0.53
+C0.49,0,0.46,0,0.43,0.01l-0.1,0.03c0,0,0,0-0.01,0L0.24,0.09C0.22,0.1,0.22,0.11,0.21,0.12C0.17,0.15,0.15,0.17,0.12,0.2
+C0.11,0.22,0.1,0.22,0.09,0.24L0.05,0.32c0,0,0,0.01-0.01,0.01l0,0L0.01,0.43C0,0.46,0,0.5,0,0.53l0,0c0,0,0,0,0,0V0.7c0,0,0,0,0,0
+l0,13.76C0,14.76,0.24,15,0.53,15H20.8c0.29,0,0.53-0.24,0.53-0.53V5.43C21.33,5.13,21.09,4.89,20.8,4.89z M19.52,1.06l-8.85,8.85
+L1.82,1.06H19.52z"/> <path class="fillColor has_transition_1000 transition_all" d="M97.95,11.96c0.01,0.01,0.02,0.02,0.03,0.03c0.01,0.01,0.02,0.02,0.03,0.03c0.01,0.01,0.03,0.02,0.04,0.03
+c0.02,0.02,0.04,0.03,0.06,0.05c0.03,0.02,0.06,0.03,0.09,0.05c0.02,0.01,0.04,0.02,0.06,0.03c0.03,0.01,0.07,0.02,0.11,0.03
+c0.02,0,0.03,0.01,0.05,0.01c0.05,0.01,0.11,0.02,0.17,0.02c0,0,0,0,0,0c0,0,0,0,0,0c0.05,0,0.11-0.01,0.16-0.02
+c0.02,0,0.03-0.01,0.05-0.01c0.04-0.01,0.07-0.02,0.11-0.03c0.02-0.01,0.04-0.02,0.06-0.03c0.03-0.02,0.06-0.03,0.09-0.05
+c0.02-0.01,0.04-0.03,0.06-0.04c0.01-0.01,0.03-0.02,0.04-0.03c0.01-0.01,0.02-0.02,0.03-0.03c0.01-0.01,0.02-0.02,0.03-0.03
+l10.26-11.29c0.32-0.35,0.29-0.89-0.06-1.21c-0.35-0.32-0.89-0.29-1.21,0.06l-9.62,10.58l-7.71-8.66
+c-0.31-0.35-0.86-0.38-1.21-0.07c-0.35,0.31-0.38,0.86-0.07,1.21L97.95,11.96z"/> <path class="fillColor has_transition_1000 transition_all" d="M109.7,14.75H75.68c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5h34.02c0.28,0,0.5-0.22,0.5-0.5
+S109.98,14.75,109.7,14.75z"/> <path class="fillColor has_transition_1000 transition_all" d="M48.26,15.75c0.19,0,0.38-0.07,0.53-0.22l0.8-0.8l3.78-0.82c0.14-0.03,0.27-0.1,0.37-0.2l9.62-9.62
+c0.14-0.14,0.22-0.33,0.22-0.53c0-0.2-0.08-0.39-0.22-0.53l-3.13-3.13c-0.29-0.29-0.76-0.29-1.05,0l-9.62,9.62
+c-0.1,0.1-0.17,0.23-0.2,0.37l-0.82,3.78l-0.8,0.8c-0.29,0.29-0.29,0.76,0,1.05C47.88,15.68,48.07,15.75,48.26,15.75z
+M50.76,10.43L59.7,1.5l2.07,2.07l-8.93,8.93l-1.3,0.28l0.31-0.31c0.29-0.29,0.29-0.76,0-1.05c-0.29-0.29-0.76-0.29-1.05,0
+l-0.31,0.31L50.76,10.43z"/> <path class="fillColor has_transition_1000 transition_all" d="M60.88-0.77l3.16,3.16c0.15,0.15,0.34,0.22,0.53,0.22s0.38-0.07,0.53-0.22c0.29-0.29,0.29-0.76,0-1.05
+L62.46-1.3l0.63-0.63c1.34-1.34,1.96-0.72,2.26-0.42l0.27,0.27c0.59,0.59,0.52,1.29-0.23,2.07c-0.29,0.3-0.28,0.77,0.02,1.05
+c0.14,0.14,0.33,0.21,0.52,0.21c0.2,0,0.39-0.08,0.54-0.23c1.3-1.35,1.38-2.99,0.21-4.16l-0.27-0.27C65.81-4,64.2-5.15,62.04-2.99
+l-1.16,1.16C60.59-1.54,60.59-1.07,60.88-0.77C60.88-0.77,60.88-0.77,60.88-0.77z"/> 
+<path class="fillColor has_transition_1000 transition_all" d="M68.69,18.25H34.67c-0.28,0-0.5,0.22-0.5,0.5s0.22,0.5,0.5,0.5h34.02c0.28,0,0.5-0.22,0.5-0.5
+S68.97,18.25,68.69,18.25z"/> </svg>
+</div>
+</div> -->
+<div class="brownieContent has_transition_800">
+    <div class="brownieClose">
+        <div class="line _1"></div>
+        <div class="line _2"></div>
+    </div>
+<div class="brownieTitle cWhite">
+    <span>Stay in touch</span>
+</div>
+<div class="brownieText  cWhite"><p>Stay connected with Casa Angelina to get the inside scoop on our latest promotions, news and exclusive offers.</p>
+</div>
+<div class="newsletterForm" rel="newsletter" > 
+    <span class="newsletterFormTitle">E-NEWSLETTER SUBSCRIPTION</span>
+    <div class="wpforms-container " id="wpforms-4385">
+        <form id="wpforms-form-4385" class="wpforms-validate wpforms-form wpforms-ajax-form" data-formid="4385" method="post" enctype="multipart/form-data" action="https://www.casangelina.com/" data-token="2595b631c38e8240cfded506295ab962"><noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
+            <div class="wpforms-field-container">
+                <div id="wpforms-4385-field_2-container" class="wpforms-field wpforms-field-select newsletter_input title wpforms-field-select-style-classic" data-field-id="2">
+                    <label class="wpforms-field-label wpforms-label-hide" for="wpforms-4385-field_2">Title <span class="wpforms-required-label">*</span>
+                    </label>
+                        <select id="wpforms-4385-field_2" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][2]" required="required">
+                            <option value="Mr."  selected='selected'>Mr.</option><option value="Mrs." >Mrs.</option>
+                            <option value="Ms." >Ms.</option></select></div>
+                            <div id="wpforms-4385-field_3-container" class="wpforms-field wpforms-field-text newsletter_input" data-field-id="3">
+                                <label class="wpforms-field-label wpforms-label-hide" for="wpforms-4385-field_3">
+                                    Name <span class="wpforms-required-label">*</span>
+                                </label>
+                                <input type="text" id="wpforms-4385-field_3" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][3]" placeholder="name" required></div>
+                                <div id="wpforms-4385-field_4-container" class="wpforms-field wpforms-field-text newsletter_input" data-field-id="4">
+                                    <label class="wpforms-field-label wpforms-label-hide" for="wpforms-4385-field_4">   Surname <span class="wpforms-required-label">*</span></label>
+                                    <input type="text" id="wpforms-4385-field_4" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][4]" placeholder="surname" required></div>
+                                    <div id="wpforms-4385-field_1-container" class="wpforms-field wpforms-field-email newsletter_input full" data-field-id="1">
+                                        <label class="wpforms-field-label wpforms-label-hide" for="wpforms-4385-field_1">Email <span class="wpforms-required-label">*</span></label>
+                                        <input type="email" id="wpforms-4385-field_1" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][1]" placeholder="email" required>
+                                    </div>
+                                        
+                                    <div id="wpforms-4385-field_5-container" class="wpforms-field wpforms-field-select newsletter_input nLangPref full wpforms-field-select-style-classic" data-field-id="5">
+                                        <label class="wpforms-field-label" for="wpforms-4385-field_5">language preference:</label>
+                                            <select id="wpforms-4385-field_5" class="wpforms-field-medium" name="wpforms[fields][5]">
+                                                <option value="english"  selected='selected'>english</option>
+                                                <option value="italian" >italian</option></select>
+                                            </div>
+                                            <div id="wpforms-4385-field_10-container" class="wpforms-field wpforms-field-checkbox newsletter_input radio full" data-field-id="10"><label class="wpforms-field-label" for="wpforms-4385-field_10">Please share your interests with us so we can send you customized information.</label>
+                                                <ul id="wpforms-4385-field_10">
+                                                <li class="choice-1 depth-1">
+                                                    <input type="checkbox" id="wpforms-4385-field_10_1" name="wpforms[fields][10][]" value="ROMANTIC GETAWAYS"  >
+                                                    <label class="wpforms-field-label-inline" for="wpforms-4385-field_10_1">ROMANTIC GETAWAYS</label></li>
+                                                    <li class="choice-2 depth-1">
+                                                        <input type="checkbox" id="wpforms-4385-field_10_2" name="wpforms[fields][10][]" value="DINING EXPERIENCES"  >
+                                                        <label class="wpforms-field-label-inline" for="wpforms-4385-field_10_2">DINING EXPERIENCES</label></li>
+                                                        <li class="choice-3 depth-1">
+                                                            <input type="checkbox" id="wpforms-4385-field_10_3" name="wpforms[fields][10][]" value="SPECIAL CELEBRATIONS"  >
+                                                            <label class="wpforms-field-label-inline" for="wpforms-4385-field_10_3">SPECIAL CELEBRATIONS</label></li><li class="choice-4 depth-1">
+                                                                <input type="checkbox" id="wpforms-4385-field_10_4" name="wpforms[fields][10][]" value="LOCAL ACTIVITIES"  >
+                                                                <label class="wpforms-field-label-inline" for="wpforms-4385-field_10_4">LOCAL ACTIVITIES</label></li>
+                                                                <li class="choice-5 depth-1">
+                                                                    <input type="checkbox" id="wpforms-4385-field_10_5" name="wpforms[fields][10][]" value="WELL-BEING"  >
+                                                                    <label class="wpforms-field-label-inline" for="wpforms-4385-field_10_5">WELL-BEING</label></li></ul>
+                                                                </div>
+                                                                <div id="wpforms-4385-field_9-container" class="wpforms-field wpforms-field-gdpr-checkbox newsletter_input privacy full radio" data-field-id="9">
+                                                                    <label class="wpforms-field-label" for="wpforms-4385-field_9">privacy policy 
+                                                                        <span class="wpforms-required-label">*</span></label><ul id="wpforms-4385-field_9" class="wpforms-field-required">
+                                                                            <li class="choice-1">
+                                                                                <input type="checkbox" id="wpforms-4385-field_9_1" name="wpforms[fields][9][]" value="I agree to the use of my personal data for the purpose stated above" required >
+                                                                                <label class="wpforms-field-label-inline" for="wpforms-4385-field_9_1">I agree to the use of my personal data for the purpose stated above</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="wpforms-field-description">The personal data provided by filling this form will be processed, mainly in a digital manner, to provide feedback on the information requested. The submission of data is free but leaving mandatory fields empty will inhibits sending the request. The other fields are optional and allow the company to contact you more quickly, to provide a more accurate answer and to elaborate anonymous statistics about their customers and/or potential customers. The data provided will not be disclosed to third parties or spread in any way. Regarding the processing of data, pursuant to art. 7 of Legislative Decree no. 196 of Italian Costitution, you have the right to obtain confirmation of the existence of personal data concerning you, their origin and the logic on which the treatment is based; to obtain cancellation, transformation into anonymous form or block if processed in violation of law; to get update, rectification or integration. To exercise your rights, please contact DIKETO CASANGELINA SRL, Via G Porzio Is E/7, 80143 Napoli.</div>
+                                                                    </div>
+
+                                                                    <div id="wpforms-4385-field_11-container" class="wpforms-field wpforms-field-hidden" data-field-id="11"><input type="hidden" id="wpforms-4385-field_11" name="wpforms[fields][11]">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="wpforms-submit-container" >
+                                                                    <input type="hidden" name="wpforms[id]" value="4385"><input type="hidden" name="wpforms[author]" value="1"><input type="hidden" name="wpforms[post_id]" value="14"><button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-4385" value="wpforms-submit" aria-live="assertive" data-alt-text="Subscribing..." data-submit-text="Subscribe!">Subscribe!</button>
+                                                                    <img src="wp-content/plugins/wpforms/assets/images/submit-spin.svg" class="wpforms-submit-spinner" style="display: none;" width="26" height="26" alt="">
+                                                                </div>
+                                                            </form>
+                                                        </div> <!-- .wpforms-container --></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="covidBrownie" class="closed brownie has_transition_800" style="display:none">
+                                                <div class="brownieBack has_transition_800 transition_all"></div>
+                                                <div class="brownieContentLayer">
+                                                    <div class="brownieIcoContainer hidden has_transition_1500">
+                                                        <div class="brownieIco has_transition_800"> 
+                                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35.02 23.5" style="enable-background:new 0 0 35.02 23.5;" xml:space="preserve"> 
+                                                                <path class="fillColor transition_all has_transition_1000" d="M14.09,20c0.19,0,0.38-0.07,0.53-0.22l0.8-0.8l3.78-0.82c0.14-0.03,0.27-0.1,0.37-0.2l9.62-9.62
+c0.14-0.14,0.22-0.33,0.22-0.53c0-0.2-0.08-0.39-0.22-0.53l-3.13-3.13c-0.29-0.29-0.76-0.29-1.05,0l-9.62,9.62
+c-0.1,0.1-0.17,0.23-0.2,0.37l-0.82,3.78l-0.8,0.8c-0.29,0.29-0.29,0.76,0,1.05C13.71,19.93,13.9,20,14.09,20z M16.59,14.68
+l8.93-8.93l2.07,2.07l-8.93,8.93l-1.3,0.28l0.31-0.31c0.29-0.29,0.29-0.76,0-1.05c-0.29-0.29-0.76-0.29-1.05,0l-0.31,0.31
+L16.59,14.68z"/> 
+<path class="fillColor transition_all has_transition_1000" d="M26.71,3.48l3.16,3.16c0.15,0.15,0.34,0.22,0.53,0.22s0.38-0.07,0.53-0.22c0.29-0.29,0.29-0.76,0-1.05
+l-2.63-2.63l0.63-0.63c1.34-1.34,1.96-0.72,2.26-0.42l0.27,0.27c0.59,0.59,0.52,1.29-0.23,2.07c-0.29,0.3-0.28,0.77,0.02,1.05
+c0.14,0.14,0.33,0.21,0.52,0.21c0.2,0,0.39-0.08,0.54-0.23c1.3-1.35,1.38-2.99,0.21-4.16l-0.27-0.27
+c-0.59-0.59-2.21-1.74-4.37,0.42l-1.16,1.16C26.42,2.71,26.42,3.18,26.71,3.48C26.71,3.48,26.71,3.48,26.71,3.48z"/> 
+<path class="fillColor svgLine transition_all has_transition_1000" d="M34.52,22.5H0.5C0.22,22.5,0,22.72,0,23s0.22,0.5,0.5,0.5h34.02c0.28,0,0.5-0.22,0.5-0.5
+S34.8,22.5,34.52,22.5z"/> 
+</svg>
+</div>
+</div>
+
+<div class="brownieContent has_transition_800">
+    <div class="brownieClose">
+        <div class="line _1">
+            
+        </div>
+        <div class="line _2">
+            
+        </div>
+    </div>
+    <div class="brownieTitle cWhite">
+        <span>Covid Test</span>
+    </div>
+    <div class="brownieText  cWhite uppercase">
+        <p>FOR YOUR COMFORT AND PEACE OF MIND, ON-SITE FULLY RECOGNIZED COVID-19 PRC TESTS ARE AVAILABLE WITH GUARANTEED RESULTS WITHIN 24 HOURS.</p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="textSwitch" class="relative has_transition_400" style="display:none"> 
+    <img class="white" src="wp-content/themes/casangelina/assets/images/home/textSwitch.png" /> 
+    <img class="brown has_transition_1500" src="wp-content/themes/casangelina/assets/images/home/textSwitchDark.png" />
+</div>
+<article data-scroll-container>
+    <section id="hTop" data-scroll-section>
+        <div id="headerShowTarget" data-scroll data-scroll-repeat data-scroll-call="showHeader">
+            
+        </div>
+        <div id="headerHideTarget" data-scroll data-scroll-repeat data-scroll-call="hideHeader"></div>
+        <div id="hTarget" data-scroll data-scroll-id="hTarget"></div>
+        <div id="holder"  data-scroll data-scroll-speed="-10" style="display:none"></div>
+        <div id="hImgContainer" class="has_transition_3000">
+            <div id="hImgLayer" class="">
+                <div id="hImgCover" class=""> 
+                    <img id="hImg" src="assets/img/hotel/1.jpg" class="fit " />
+                </div>
+                </div>
+            </div>
+
+            <div id="hElementsLayer" data-scroll data-scroll-speed="-10" data-scroll-class="stand">
+                <div id="hLogo"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854.56 135.26"> 
+                        <g class="logoPay top_single has_transition_1500"> 
+                            <use class="fillColor quickColor" x="0" y="0" xlink:href="#caLogo" /> 
+                        </g> 
+                    </svg>
+                </div>
+                <div class="mobileOnly" id="hVideoLayer"  data-icon="textArrow"  data-text="watch" data-theme="whiteArrow"><video playsinline autoplay muted loop src="wp-content/themes/casangelina/assets/video/home.mp4"></video>
+                </div>
+
+                <div class="oButton mobileOnly watch whiteArrow margin has_transition_1500 top_ultralow mobileOnly"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg>
+                    <div class="oContent">
+                        <div class="oBackground has_transition_1000 transition_all"></div>
+                        <div class="oLabelContainer no_overflow">
+                            <span class="oLabel top_hidden has_transition_1000 block d200 transition_all">watch</span></div></div>
+                            <div class="oSymbol"> 
+                                <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div></div>
+
+                                <div class="oButton mobileOnly close whiteArrow margin has_transition_1500 top_ultralow mobileOnly"> 
+                                    <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> 
+                                        <use x="0" y="0" xlink:href="#outerShape" /> </svg>
+                                        <div class="oContent">
+                                            <div class="oBackground has_transition_1000 transition_all"></div>
+                                            <div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 block d200 transition_all">close</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="oSymbol"> 
+                                            <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> 
+                                                <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div></div>
+                                                <div id="scrollDown"> 
+<svg id="verticalArrow" class="top_low has_transition_1500" version="1.1"xmlns="" xmlns:xlink="" x="0px" y="0px"
+viewBox="0 0 16.74 39.42" style="enable-background:new 0 0 16.74 39.42;" xml:space="preserve"> 
+<path fill="#FFFFFF" d="M7.99,39.42c0.24,0.1,0.52,0.1,0.77,0c0.12-0.05,0.23-0.12,0.32-0.22l7.37-7.37c0.39-0.39,0.39-1.02,0-1.41
+s-1.02-0.39-1.41,0l-5.66,5.66L9.37,1c0-0.55-0.45-1-1-1C8.09,0,7.84,0.11,7.66,0.29C7.48,0.47,7.37,0.72,7.37,1l0,35.08l-5.66-5.66
+c-0.39-0.39-1.02-0.39-1.41,0s-0.39,1.02,0,1.41l7.37,7.37C7.75,39.29,7.87,39.37,7.99,39.42z"/> </svg><div class="scrollDownText cWhite no_overflow mobileHidden"><span class="has_transition_2000 block top_hidden d100 uppercase">scroll <br />to start the experience with us</span></div><div class="scrollDownText cWhite no_overflow mobileOnly"><span class="has_transition_2000 block top_hidden d100 uppercase">swipe up <br />to start the experience</span></div></div></div></section><section id="hPay" data-scroll-section><div id="hPayTarget" data-scroll data-scroll-id="hPayTarget"></div><div id="hPayLayer" class="no_overflow"><div id="payLook" class="no_overflow cAlyssum" data-scroll data-scroll-repeat> <span class="inline_block has_transition_2000 top_hidden">L</span> <span class="inline_block has_transition_2000 top_hidden d100">O</span> <span class="inline_block has_transition_2000 top_hidden d200">O</span> <span class="inline_block has_transition_2000 top_hidden d300">K</span><div id="payLimits" class="no_overflow has_transition_3000 cArgilla" data-scroll data-scroll-repeat > <span class="inline_block has_transition_3000 top_hidden d400">BEYOND</span> <span class="inline_block has_transition_3000 top_hidden d500">LIMITS INFORMATION.</span></div></div><div id="hStrip" class="no_overflow relative"> <img id="hImgStrip" src="assets/img/hotel/2.jpg" class="fit" data-scroll data-scroll-speed=0.5 /></div><div id="payFind" class="no_overflow cAlyssum" data-scroll data-scroll-repeat><span class="block has_transition_2000 top_hidden">FIND</span></div><div id="payPerfection" class="cArgilla" data-scroll data-scroll-repeat> <span class="top_translated has_transition_2000 inline_block">TRUE</span> <span class="top_translated has_transition_2000 d150 inline_block">PERFECTION.</span></div></div></section><section id="intro" class="tripleMargin" data-scroll-section><div class="mainContainer"><div class="introTextContainer"><div class="introText text"><p>Sitting atop the curvaceous cliffs of Italy’s Amalfi Coast, Casa Angelina offers a sublime slice of modern minimalism on the Mediterranean, with an emphasis on barefoot luxury and top-level gastronomy.<br /> <br /> Our 37-room hotel serves as a sanctuary, bearing a fresh, white-washed aesthetic that accentuates every space, from the azure sea and sky outside to the contemporary artworks on display inside.</p></div></div><div id="partners" class="doubleMargin"><div class="partner lhw"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="partner virtuoso"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="partner ae"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="partner traveller"><img src="assets/img/logo-l.jpg" class="full_width" /></div></div></div></section><section id="ethos" class="tripleMargin" data-scroll-section><div class="mainBackground bAlyssum has_transition_3000 top_translated" data-scroll></div><div class="mainContainer"><div id="ethosTitleContainer"><div id="ethosIntroPic" class="introPic relative no_overflow covered" data-scroll data-scroll-repeat> <img src="assets/img/hotel/4.jpg" class="fit" /></div><div id="ethosTitle" class="blockTitle" data-scroll data-scroll-repeat><h2 class="flex no_overflow"> <span class="inlineBlock top_hidden has_transition_3000 d200">T</span> <span class="inlineBlock top_hidden has_transition_3000 d300">i</span> <span class="inlineBlock top_hidden has_transition_3000 d400">t</span> <span class="inlineBlock top_hidden has_transition_3000 d500">l</span> <span class="inlineBlock top_hidden has_transition_3000 d600">e</span></div></div><div id="ethosIntroText" class="boxed margin text no_overflow" data-scroll data-scroll-repeat><p class="top_hidden has_transition_3000">Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p></div><div id="ethosContent" data-scroll data-scroll-id="ethosContent"><div id="ethosPic" class="sliding no_overflow"> <img src="assets/img/hotel/3.jpg" class="fit" data-scroll data-scroll-speed=-1 /></div><div id="ethosText" class="text" data-scroll-repeat data-scroll data-scroll-speed=1 data-disable-mobile-scroll><p>Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p><div class="oButton whiteArrow margin has_transition_1500 top_ultralow mobileOnly" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 block d200 transition_all">concept</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div></div></div></div></div> <!--<div id="ethosLayer" class="textLayer"><div id="sublime" class="tl _1 uppercase"  data-scroll data-scroll-speed=-1 data-scroll-direction=horizontal>sublime</div><div id="minimalism" class="tl _2 uppercase" data-scroll data-scroll-speed=-0.5 data-scroll-direction=horizontal> minimalism</div><div id="modern" class="tl _3" data-scroll data-scroll-speed=1.5><span> modern </span></div></div> --> <a href="#" class="activeLayer" data-action="navigation" data-icon="textArrow" data-href="#" data-text="Section name 4" data-theme="whiteArrow" data-precision="true" data-scroll></a></section><section id="prIntro" class="tripleMargin" data-scroll-section><div class="mainContainer"><div id="accolades" data-scroll data-scroll-call="runAccolades"><div id="accoladesScroller"><div class="accolade lhwbnh"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="accolade design"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="accolade reader"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="accolade ruinart"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="accolade forbes"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="accolade design"><img src="assets/img/logo-l.jpg" class="full_width" /></div> <!--<div class="accolade  lhwbnh mobileOnly"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="accolade design mobileOnly"><img src="assets/img/logo-l.jpg" class="full_width" /></div><div class="accolade reader mobileOnly"><img src="assets/img/logo-l.jpg" class="full_width" /></div>--></div></div><div id="prIntroText" class="text doubleMargin"><p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.</p></div></div></section><section id="prSection" class="margin" data-scroll-section><div class="mainBackground bAlyssum"></div><div class="mainContainer relative"><div class="miniTitle lowercase"><span></span></div><div id="prTop" class="halfMargin"><div id="prTitle" class="sectionTitle" data-scroll data-scroll-repeat><div class="small no_overflow"><span class="block top_hidden has_transition_1500 cArgilla uppercase">Section 6 Subtitle </span></div><div class="big cRose no_overflow"><span class="block top_hidden has_transition_1500 d100 cAlyssum uppercase"> Section 6 Title</span></div></div><div id="prIntroPic" class="introPic relative no_overflow covered" data-scroll data-scroll-repeat> <img src="assets/img/hotel/5.jpg" class="fit" /></div></div><div id="prSlider" class="relative no_overflow halfMargin"> <img src="assets/img/hotel/5.jpg" class="fit" /></div><div class="oButton show whiteArrow margin has_transition_1500 top_ultralow mobileOnly lowercase" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 block d200 transition_all">Angelina Suite</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div></div></div> <a href="" class="activeLayer" data-action="navigation" data-icon="textArrow" data-href="https://www.casangelina.com/suites/angelina-suite/" data-text="Angelina Suite" data-theme="whiteArrow" data-precision="true" data-scroll></a></section><section id="hFacilities" class="relative no_overflow" data-scroll-section><div id="hFacilitiesTarget"></div><div class="layerUpdate" data-scroll data-scroll-call="layerUpdate" data-scroll-offset="-100%"></div><div class="callerTop" data-scroll data-scroll-repeat data-scroll-class="action" data-scroll-call="headerToWhite" data-scroll-offset="95%"></div><div id="hFacilitiesSticky" data-scroll data-scroll-class="sticky" data-scroll-id="hFacilitiesSticky" data-scroll-sticky data-scroll-target="#hFacilitiesTarget"><div class="mainBackground hFacilitiesBackground"> <img src="assets/img/hotel/6.jpg" class="fit" /><div class="veil"></div></div><div class="mainContainer _1"><div id="hFacilitiesTop" class="margin"><div class="miniTitle cWhite"><span>Section7 Title</span></div><div id="hFacilitiesTitle" class="sectionTitle cWhite"><div class="big uppercase">that count</div><div class="small uppercase"> Lorem7</div></div></div></div><div id="hFacilitiesSlider"><div id="hFacilitiesScroller"> <a href="" class="urlManager hFacilitiesItem horizontal relative" data-action="navigation" data-icon="arrow" data-href=""><div class="hFItemPic relative"><img alt=""  src="assets/img/hotel/1.jpg" class="fit" /></div><div class="hFItemTitle">Img 1</div> </a> <a href="#" class="urlManager hFacilitiesItem vertical relative" data-action="navigation" data-icon="arrow" data-href="#"><div class="hFItemPic relative"><img alt=""  src="assets/img/hotel/2.jpg" class="fit" /></div><div class="hFItemTitle">Img2</div> </a> <a href="#" class="urlManager hFacilitiesItem horizontal relative" data-action="navigation" data-icon="arrow" data-href="guest-services/beach/index.html"><div class="hFItemPic relative"><img alt=""  src="assets/img/hotel/3.jpg" class="fit" /></div><div class="hFItemTitle">Img3</div> </a> <a href="#" class="urlManager hFacilitiesItem vertical relative" data-action="navigation" data-icon="arrow" data-href="#"><div class="hFItemPic relative"><img alt=""  src="assets/img/hotel/4.jpg" class="fit" /></div><div class="hFItemTitle">Img4</div> </a> <a href="#" class="urlManager hFacilitiesItem horizontal relative" data-action="navigation" data-icon="arrow" data-href="#"><div class="hFItemPic relative"><img alt=""  src="assets/img/hotel/5.jpg" class="fit" /></div><div class="hFItemTitle">Img5</div> </a> <a href="#" class="urlManager hFacilitiesItem vertical relative" data-action="navigation" data-icon="arrow" data-href="#"><div class="hFItemPic relative"><img alt=""  src="assets/img/hotel/6.jpg" class="fit" /></div><div class="hFItemTitle">Img6</div> </a></div></div></div><div class="callerBottom" data-scroll data-scroll-repeat data-scroll-class="action" data-scroll-call="headerToDark" data-scroll-offset="95%"></div></section><section id="hDining" class="doubleMargin" data-scroll-section><div class="callerTop" data-scroll data-scroll-repeat data-scroll-class="action" data-scroll-call="headerToWhite" data-scroll-offset="95%"></div><div id="hDiningTarget"></div><div id="hDiningSticky" data-scroll data-scroll-class="sticky" data-scroll-id="hDiningSticky" data-scroll-sticky data-scroll-target="#hDiningTarget"><div class="mainBackground bMarrone"></div><div class="mainContainer flexed"><div id="hDiningScroll"><div class="miniTitle cWhite"><span>Section8</span></div><div id="hDiningTitle" class="sectionTitle halfMargin no_overflow" data-scroll data-scroll-repeat><div class="small cWhite uppercase"><span class="block top_hidden has_transition_1500 d100">experience </span></div><div class="big cWhite uppercase" ><span class="block top_hidden has_transition_1500"> Section 8 Title</span></div></div><div id="hDiningItems" class="margin"><div class="callerBottom mobileOnly" data-scroll data-scroll-repeat data-scroll-class="action" data-scroll-call="headerToDark" data-scroll-offset="90%"></div> <a href="#" class="block hDiningItem long relative no_overflow urlManager" data-action="navigation" data-theme="dark" data-icon="arrow" data-href="#" data-scroll data-scroll-repeat data-scroll-class="whitening" data-scroll-offset="108%"><div class="hDiningItemPic relative"><img class="fit" alt="" srcset="assets/img/hotel/2.jpg 1010w, assets/img/hotel/3.jpg 300w, assets/img/hotel/4.jpg " src="assets/img/hotel/5.jpg " width="1010" height="480" /></div><div class="listItemTitle cMarrone has_transition_800 transition_all">In publishing and graphic design, Lorem ipsum is a placeholder text commonly</div><div class="listItemSubtitle cFango  has_transition_800 transition_all"><!-- wp:paragraph --><p>Details information</p> <!-- /wp:paragraph --></div> </a><div class="hDiningItemRow halfMargin"> <a href="#"  class="hDiningItem" data-action="navigation" data-icon="arrow" data-href="#" data-scroll data-scroll-repeat data-scroll-class="whitening" data-scroll-offset="138%"><div class="hDiningItemContainer top_translated has_transition_3000" data-scroll><div class="hDiningItemPic relative"><img class="fit" alt="" srcset="assets/img/hotel/4.jpg 533w, assets/img/hotel/5.jpg 191w" src="assets/img/hotel/6.jpg" width="533" height="836" /></div><div class="listItemTitle cMarrone has_transition_800 transition_all">Title</div><div class="listItemSubtitle cFango  has_transition_800 transition_all"><!-- wp:paragraph --><p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. </p> <!-- /wp:paragraph --></div></div> </a> <a href="#"   class="hDiningItem" data-action="navigation" data-icon="arrow" data-href="#" data-scroll data-scroll-repeat data-scroll-class="whitening" data-scroll-offset="138%"><div class="hDiningItemContainer top_translated has_transition_3000 d200" data-scroll><div class="hDiningItemPic relative"><img class="fit" alt="" srcset="assets/img/hotel/1.jpg 533w, assets/img/hotel/1.jpg 191w" src="assets/img/hotel/3.jpg" width="533" height="836" /></div><div class="listItemTitle cMarrone has_transition_800 transition_all">Title</div><div class="listItemSubtitle cFango  has_transition_800 transition_all"><!-- wp:paragraph --><p>Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</p> <!-- /wp:paragraph --></div></div> </a></div> <a href="#"  class="hDiningItem long relative no_overflow halfMargin" data-action="navigation" data-theme="dark" data-icon="arrow" data-href="#" data-scroll data-scroll-repeat data-scroll-class="whitening" data-scroll-offset="108%"><div class="hDiningItemPic relative"><img class="fit" alt="" srcset="assets/img/hotel/5.jpg 1010w, assets/img/hotel/4.jpg 300w, assets/img/hotel/4.jpg 768w" src="wp-content/uploads/2022/02/4_Wine_Cellar.jpg" width="1010" height="480" /></div><div class="listItemTitle cMarrone has_transition_800 transition_all">Title</div><div class="listItemSubtitle cFango  has_transition_800 transition_all"><!-- wp:paragraph --><p>Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</p> <!-- /wp:paragraph --></div> </a><div class="hDiningItemRow halfMargin"> <a href="" class="hDiningItem" data-action="navigation" data-icon="arrow" data-href=""><div class="hDiningItemContainer top_translated has_transition_3000" data-scroll><div class="hDiningItemPic relative"><img class="fit" alt="" srcset="assets/img/hotel/4.jpg 480w, assets/img/hotel/4.jpg 189w" src="assets/img/hotel/6.jpg" width="480" height="760" /></div><div class="listItemTitle cMarrone has_transition_800 transition_all">Title</div><div class="listItemSubtitle cFango  has_transition_800 transition_all"><!-- wp:paragraph --><p>Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</p> <!-- /wp:paragraph --></div></div> </a> <a href="" class="hDiningItem" data-action="navigation" data-icon="arrow" data-href=""><div class="hDiningItemContainer top_translated has_transition_3000 d200" data-scroll><div class="hDiningItemPic relative"><img class="fit" alt="" srcset="assets/img/hotel/1.jpg" src="wp-content/uploads/2022/02/GIA01201.jpg" width="533" height="836" /></div><div class="listItemTitle cMarrone has_transition_800 transition_all">Title</div><div class="listItemSubtitle cFango  has_transition_800 transition_all"><!-- wp:paragraph --><p> Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document</p> <!-- /wp:paragraph --></div></div> </a></div></div></div><div id="hDiningFixed" class="relative"><div id="hDiningIntroPic" class="introPic relative no_overflow covered" data-scroll data-scroll-repeat> <img src="assets/img/hotel/1.jpg" class="fit top" /></div><div id="tasteTitle" class="blockTitle" data-scroll><h2 class="flex no_overflow cWhite"> <span class="inlineBlock top_hidden has_transition_3000 d200">T</span> <span class="inlineBlock top_hidden has_transition_3000 d300">i</span> <span class="inlineBlock top_hidden has_transition_3000 d400">t</span> <span class="inlineBlock top_hidden has_transition_3000 d500">l</span> <span class="inlineBlock top_hidden has_transition_3000 d600">e</span></div><div id="tasteText" class="text halfMargin cWhite no_overflow" data-scroll><p class="top_hidden block has_transition_3000">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document  <br /> or a typeface without relying on meaningful content.</p></div></div></div></div><div class="callerBottom mobileHidden" data-scroll data-scroll-repeat data-scroll-class="action" data-scroll-call="headerToDark" data-scroll-offset="75%"></div></section><section id="hExperiences" class="tripleMargin" data-scroll-section><div class="callerTop" data-scroll data-scroll-repeat data-scroll-class="action" data-scroll-call="headerToWhite" data-scroll-offset="95%"></div><div class="mainBackground bGreige"></div><div class="mainContainer flexed"><h2 id="hExperiencesTitle" class="slidingTitle" data-scroll data-scroll-repeat> <span class="slidingTitleSmall block top_single has_transition_1500 uppercase">memorable </span> <span class="slidingTitleBig block no_overflow cWhite"> <span class="top_hidden inline_block has_transition_2000 uppercase d100"> </span> <span class="top_hidden inline_block has_transition_2000 uppercase d200">e</span> <span class="top_hidden inline_block has_transition_2000 uppercase d300">x</span> <span class="top_hidden inline_block has_transition_2000 uppercase d400">p</span> <span class="top_hidden inline_block has_transition_2000 uppercase d500">e</span> <span class="top_hidden inline_block has_transition_2000 uppercase d600">r</span> <span class="top_hidden inline_block has_transition_2000 uppercase d700">i</span> <span class="top_hidden inline_block has_transition_2000 uppercase d800">e</span> <span class="top_hidden inline_block has_transition_2000 uppercase d900">n</span> <span class="top_hidden inline_block has_transition_2000 uppercase d1000">c</span> <span class="top_hidden inline_block has_transition_2000 uppercase d1100">e</span> <span class="top_hidden inline_block has_transition_2000 uppercase d1200">s</span> </span></h2><div id="hExperiencesContainer" class="margin"><div id="hExperiencesLayer" class="relative no_overflow"><div class="hExperienceBlock _1 show has_transition_2000 no_overflow bGreige"><div class="hExperienceButton relative bGreige"><div class="hExperienceTitle cWhite"><h2>Section Title</h2></div> <a href="" class="urlManager hExperienceArrow"><div class="hExperienceBackground has_transition_400"></div> <svg class="fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg> </a></div><div class="hExperienceContent has_transition_2000"><div class="hExperienceSubTitle miniTitle"><h3><p>Title</p></h3></div><div class="hExperiencePic _1 show active mobileOnly"><div class="mask_top full_height has_transition_2000 full no_overflow"><div class="t_container has_transition_2000 full_height no_overflow"> <img src="assets/img/hotel/1.jpg" class="fit has_transition_2000"  /></div></div></div><div class="hExperienceText cWhite"><div class="text small"><p>Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. br /><br /></p><p></p></div><div class="hExperienceActions halfMargin"> <a class="oButton show whiteArrow has_transition_1500 top_ultralow hBook" style="display:none" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 d200 transition_all">book this experience!</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div> </a> <a href=""  class="urlManager oButton show whiteArrow has_transition_1500 top_ultralow hMore" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 d200 transition_all">more details</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div> </a></div></div></div></div><div class="hExperienceBlock _2  has_transition_2000 no_overflow bGreige"><div class="hExperienceButton relative bGreige"><div class="hExperienceTitle cWhite"><h2>Fine Driving on the Amalfi Coast</h2></div> <a href="" class="urlManager hExperienceArrow"><div class="hExperienceBackground has_transition_400"></div> <svg class="fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg> </a></div><div class="hExperienceContent has_transition_2000"><div class="hExperienceSubTitle miniTitle"><h3><p>A DOSE OF RETRO MAGIC</p></h3></div><div class="hExperiencePic _2  mobileOnly"><div class="mask_top full_height has_transition_2000 full no_overflow"><div class="t_container has_transition_2000 full_height no_overflow"> <img src="wp-content/uploads/2022/01/1_Top_Fine_Driving-1024x1024.jpg" class="fit has_transition_2000"  /></div></div></div><div class="hExperienceText cWhite"><div class="text small"><p>Few places in Italy exemplify la dolce vita quite like the Amalfi Coast...<br /><br /></p><p></p></div><div class="hExperienceActions halfMargin"> <a class="oButton show whiteArrow has_transition_1500 top_ultralow hBook" style="display:none" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 d200 transition_all">book this experience!</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div> </a> <a href=""  class="urlManager oButton show whiteArrow has_transition_1500 top_ultralow hMore" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 d200 transition_all">more details</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div> </a></div></div></div></div><div class="hExperienceBlock _3  has_transition_2000 no_overflow bGreige"><div class="hExperienceButton relative bGreige"><div class="hExperienceTitle cWhite"><h2>Romance Retreat</h2></div> <a href="" class="urlManager hExperienceArrow"><div class="hExperienceBackground has_transition_400"></div> <svg class="fillColor has_transition_1000 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg> </a></div><div class="hExperienceContent has_transition_2000"><div class="hExperienceSubTitle miniTitle"><h3><p>A STARRY-EYED WEEKEND STAY</p></h3></div><div class="hExperiencePic _3  mobileOnly"><div class="mask_top full_height has_transition_2000 full no_overflow"><div class="t_container has_transition_2000 full_height no_overflow"> <img src="wp-content/uploads/2022/01/1_Top_GIA01133-1024x1024.jpg" class="fit has_transition_2000"  /></div></div></div><div class="hExperienceText cWhite"><div class="text small"><p>With our dreamy cliff-side setting and pared-back, sophisticated style, Casa Angelina is the ultimate romantic getaway for loved-up couples.<br /><br /></p><p></p></div><div class="hExperienceActions halfMargin"> <a class="oButton show whiteArrow has_transition_1500 top_ultralow hBook" style="display:none" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 d200 transition_all">book this experience!</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div> </a> <a href=""  class="urlManager oButton show whiteArrow has_transition_1500 top_ultralow hMore" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 d200 transition_all">more details</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div> </a></div></div></div></div><div class="hExperienceBlock _4  has_transition_2000 no_overflow bGreige"><div class="hExperienceButton relative bGreige"><div class="hExperienceTitle cWhite"><h2>Body &#038; Soul</h2></div> <a href="" class="urlManager hExperienceArrow"><div class="hExperienceBackground has_transition_400"></div> <svg class="fillColor has_transition_1000 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg> </a></div><div class="hExperienceContent has_transition_2000"><div class="hExperienceSubTitle miniTitle"><h3><p>GETTING BACK TO THE BEST YOU</p></h3></div><div class="hExperiencePic _4  mobileOnly"><div class="mask_top full_height has_transition_2000 full no_overflow"><div class="t_container has_transition_2000 full_height no_overflow"> <img src="assets/img/hotel/2" class="fit has_transition_2000"  /></div></div></div><div class="hExperienceText cWhite"><div class="text small"><p>Decompress with this three-night wellness package, which is all about making you feel fit, healthy and stress-free.<br /><br /></p><p></p></div><div class="hExperienceActions halfMargin"> <a class="oButton show whiteArrow has_transition_1500 top_ultralow hBook" style="display:none" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 d200 transition_all">book this experience!</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div> </a> <a href=""  class="urlManager oButton show whiteArrow has_transition_1500 top_ultralow hMore" data-scroll data-scroll-repeat data-scroll-class="open"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <use x="0" y="0" xlink:href="#outerShape" /> </svg><div class="oContent"><div class="oBackground has_transition_1000 transition_all"></div><div class="oLabelContainer no_overflow"><span class="oLabel top_hidden has_transition_1000 d200 transition_all">more details</span></div></div><div class="oSymbol"> <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> </svg></div> </a></div></div></div></div></div><div id="hExperiencesPics" class="no_overflow mobileHidden"><div id="hExperiencesPicsContainer" data-scroll data-scroll-speed=-1><div class="hExperiencePic _1 show active"><div class="mask_top full_height has_transition_2000 full no_overflow"><div class="t_container has_transition_2000 full_height no_overflow"> <img src="assets/img/hotel/2.jpg" class="fit has_transition_2000"  /></div></div></div><div class="hExperiencePic _2 "><div class="mask_top full_height has_transition_2000 full no_overflow"><div class="t_container has_transition_2000 full_height no_overflow"> <img src="assets/img/img/hotel/3.jpg" class="fit has_transition_2000"  /></div></div></div><div class="hExperiencePic _3 "><div class="mask_top full_height has_transition_2000 full no_overflow"><div class="t_container has_transition_2000 full_height no_overflow"> <img src="assets/img/img/hotel/3.jpg" class="fit has_transition_2000"  /></div></div></div><div class="hExperiencePic _4 "><div class="mask_top full_height has_transition_2000 full no_overflow"><div class="t_container has_transition_2000 full_height no_overflow"> <img src="assets/img/img/hotel/3.jpg" class="fit has_transition_2000"  /></div></div></div></div></div></div></div><div class="callerBottom" data-scroll data-scroll-repeat data-scroll-class="action" data-scroll-call="headerToDark" data-scroll-offset="95%"></div></section><section id="hLifeStyle" class="doubleMargin mobileHidden" style="display:none" data-scroll-section><div class="mainBackground bAlyssum"></div><div class="mainContainer flexed"><h2 id="hLifeStyleTitle" class="slidingTitle" data-scroll> <span class="slidingTitleBig block no_overflow cAlyssum"> <span class="top_hidden inline_block has_transition_2000">I</span> <span class="top_hidden inline_block has_transition_2000 d100">N</span> <span class="top_hidden inline_block has_transition_2000 d200">S</span> <span class="top_hidden inline_block has_transition_2000 d300">T</span> <span class="top_hidden inline_block has_transition_2000 d400">A</span> <span class="top_hidden inline_block has_transition_2000 d500">G</span> <span class="top_hidden inline_block has_transition_2000 d600">R</span> <span class="top_hidden inline_block has_transition_2000 d700">A</span> <span class="top_hidden inline_block has_transition_2000 d800">M</span> </span> <span class="slidingTitleSmall top_single has_transition_1500 d900 cArgilla">@CASANGELINA</span></h2> <a id="hLifeStylePanel" href="http://instagram.com/casaangelinalifestyle" target="_blank"><div class="hLifeStyleBlock"><div id="hLifeStyleTarget"></div><div id="hLifeStyleSticky" data-scroll data-scroll-class="sticky" data-scroll-id="hLifeStyleSticky" data-scroll-sticky data-scroll-target="#hLifeStyleTarget"><div class="hLSBlockTitle panelLabel bAlyssum relative"><h3>Dolce far niente profumato al limone</h3></div><div class="hLSBlockPic relative no_overflow"><img src="" class="fit"  /></div></div></div><div class="hLifeStyleBlock"><div id="hLifeStyleTarget2"></div><div id="hLifeStyleSticky2" data-scroll data-scroll-class="sticky" data-scroll-id="hLifeStyleSticky2" data-scroll-sticky data-scroll-target="#hLifeStyleTarget2"><div class="hLSBlockTitle panelLabel bAlyssum relative"><h3>Un sorso di paradiso</h3></div><div class="hLSBlockPic relative no_overflow"><img src="wp-content/themes/casangelina/assets/images/home/IG_02.jpg" class="fit"  /></div></div></div><div class="hLifeStyleBlock"><div id="hLifeStyleTarget3"></div><div id="hLifeStyleSticky3" data-scroll data-scroll-class="sticky" data-scroll-id="hLifeStyleSticky3" data-scroll-sticky data-scroll-target="#hLifeStyleTarget3"><div class="hLSBlockTitle panelLabel bAlyssum relative"><h3>Suggestioni romantiche</h3></div><div class="hLSBlockPic relative no_overflow"><img src="wp-content/themes/casangelina/assets/images/home/IG_03.jpg" class="fit"  /></div></div></div><div class="hLifeStyleBlock"><div class="hLSBlockTitle panelLabel bAlyssum relative"><h3>Less is more...</h3></div><div class="hLSBlockPic relative no_overflow"><img src="wp-content/themes/casangelina/assets/images/home/IG_04.jpg" class="fit"  /></div></div> </a></div></div></section><aside id="clocks" class=" doubleMargin" data-scroll-section><div class="" id=""></div></div></aside><footer class="doubleMargin relative" data-scroll-section><div class="layerUpdate" data-scroll data-scroll-call="layerUpdate"></div><div id="footerTarget" data-scroll data-scroll-id="footerTarget"></div><div id="weatherIn" data-scroll-id="weatherIn" data-scroll data-scroll-repeat data-scroll-call="weatherManage"></div><div id="footerSticky" data-scroll  data-scroll-id="footerSticky" data-scroll-class="sticky" data-scroll-sticky data-scroll-target="#footerTarget"><div id="footerMain" class="relative"><div class="mainBackground no_overflow"> <img src="assets/img/hotel/3.jpg" class="fit" data-scroll data-scroll-speed=-1 data-scroll-offset="0,100%" /></div><div class="mainContainer"><div id="footerLeft"><div id="footerLogo"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854.56 135.26"> <use class="fillColor" x="0" y="0" xlink:href="#caLogo" /> </svg></div><div id="footerInfo" class="doubleMargin"><p> <br /> Dhaka<br /> Bangladesh<br /> ph <a href="tel:+8801800000000">+8801800000000</a><br /> fax +</p></div><div id="copyright" class="doubleMargin"><p>© studio23.com.bd | all rights reserved</p></div></div><div id="footerRight"><div class="socials"> <a class="fb" target="_blank"  href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a> <a class="ig" target="_blank" href="http://instagram.com/" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a> <a class="tw" target="_blank" href=""><svg xmlns="" width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a></div></div></div></div><div id="footerData"><div id="footerDataTop"><div id="date" class="weatherContainer"><div id="navContent"><div id="navScroller"> <svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d250" href="">Relaxing<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>tranquil beauty</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d300" href="">Romantic<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>the ultimate romantic hideaway</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d350" href="">Canopy<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>light and airy</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d400" href="">Classic<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>cozy chic</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d450" href="">Single<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>a truly private experience</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d500" href="">Eaudesea Experience<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>where sea and sky hypnotize your soul</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a></div></div><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d250" href="">Wine Cellar<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>a sommelier-curated wine selection</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d300" href="">Lorem ipsum text<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>casual all-day dining</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d350" href="">Seascape Cocktail Bar<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>creative cocktails &amp;&nbsp;majestic views</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d400" href="">Rooftop Terrace<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>private dining &amp; intimate celebrations</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a></div></div><div class="navSection relative" data-scroll><div class="navSectionTitle no_overflow"><span class="block top_hidden has_transition_2000">Guest Services</div><div class="navSectionItems"> <!-- <a class="navItem urlManager block top_low has_transition_1500" href="">overview<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>BECAUSE IT’S EXTRAS THAT COUNTS</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a>--> </span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a></div></div><div class="navSection relative" data-scroll><div class="navSectionTitle no_overflow"><span class="block top_hidden has_transition_2000">Experiences</div><div class="navSectionItems"> <!-- <a class="navItem urlManager block top_low has_transition_1500" href="">overview<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>add value to your stay</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a>--> <a class="navItem urlManager block top_low has_transition_1500 d100" href="">Section 9 Title<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>Short Description</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d150" href="">Fine Driving on the Amalfi Coast’s Winding Roads<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>A DOSE OF RETRO MAGIC</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d200" href="">Romance Retreat<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>A STARRY-EYED WEEKEND STAY</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> </div></div><div class="navSection relative" data-scroll><div class="navSectionTitle no_overflow"><span class="block top_hidden has_transition_2000">Photogallery</div><div class="navSectionItems"> <!-- <a class="navItem urlManager block top_low has_transition_1500" href="">overview<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>Unforgettable Memories</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a>--> <a class="navItem urlManager block top_low has_transition_1500 d100" href="">Hotel<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d150" href="">Rooms &#038; Suites<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d200" href="">Dining<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a></div></div><div class="navSection relative mobileOnly" data-scroll><div class="navSectionTitle no_overflow"><span class="block top_hidden has_transition_2000">Miscellaneous</div><div class="navSectionItems"> <a class="navItem urlManager block top_low has_transition_1500 d0   " href="" >Press<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>IN THE PRESS</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d50   " href="" >Travel Safe<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d100   " href="faq/index.html" >Faq<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem block top_low has_transition_1500 d150   " href="" target="_blank">Leaders club<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d200 margin  " href="" >Contacts<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"><p>IN TOUCH</p> </span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d250 margin no_default credits" href="" >Credits<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d300 no_default thanks " href="#" >Special Thanks<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a> <a class="navItem urlManager block top_low has_transition_1500 d350   " href="" >Privacy Policy<span class="subItem"><span class="subTitle block mask_left has_transition_2000 no_overflow"><span class="block t_container has_transition_2000 no_overflow"></span></span><svg class="no_opacity oArrow fillColor has_transition_1500 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"><use x="0" y="0" xlink:href="#buttonArrow" /></svg></span></a></div></div></div></div></div><div id="navBottom"><div class="socials"> <a class="block fb top_low has_transition_1500 d300" target="_blank"  href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a> <a class="block ig top_low has_transition_1500 d400" target="_blank" href="" ><svg xmlns="" width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a> <!-- <a class="block tw top_low has_transition_1500 d500" target="_blank" href=""><svg xmlns="" width="24" height="24" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a> --></div><div class="langsContainer" ><ul class="langs cWhite"><li class="lang-item lang-item-2 lang-item-en current-lang lang-item-first"><a lang="en-US" hreflang="en-US" href="">English</a></li><li class="lang-item lang-item-7 lang-item-it"><a lang="it-IT" hreflang="it-IT" href="">Italiano</a></li><li class="lang-item lang-item-12 lang-item-de"><a lang="de-DE" hreflang="de-DE" href="">Deutsch</a></li><li class="lang-item lang-item-17 lang-item-fr"><a lang="fr-FR" hreflang="fr-FR" href="">Français</a></li></ul></div></div></div></nav><aside class="overlay has_transition_1000" id="bookOverlay"><div class="mainBackground bTortora hidden has_transition_1000"></div><div class="overlayClose" id="bookNowClose"> <svg class="circlePath" xmlns=""><circle class="has_transition_1000_inout transition_all fillColor" cx="19" cy="19" r="18" stroke-width="1.3" fill="transparent"></circle></svg><div class="overlayCloseInner has_transition_1000"></div></div><div class="overlayContainer"><div class="overlayTitle cWhite no_overflow detailTitle"> <span class="top_hidden block has_transition_1500 uppercase">book now</span><div style="display:none" class="ovSmall cMarrone no_overflow has_transition_1500 top_single"> <span class="uppercase">See you from April 1st, 2023</span></div></div><div class="ovGroup no_overflow benefits"><div class="ovSmall cMarrone no_overflow has_transition_1500 top_single d50"> <span><span class="uppercase">Why book direct:</span><br /><br /> - exclusive in-room welcome amenities<br /> - upsells with discounts & best rate guarantee<br /> - more Flexibility in the booking process<br /> - more personalized Guest Experience<br /> </span></div></div><div class="ovGroup bookArrival no_overflow"> <label for="bookArrival" class="has_transition_1500 overlayLabel detailTitle cWhite top_single d100">arrival <span class="icoContainer mobileHidden top_single has_transition_1500 d100"><img class="calendarIco" src="wp-content/themes/casangelina/assets/images/calendar.png"></span></label><input id="bookArrival" class="cMarrone detailTitle top_single has_transition_1500 d200"></div><div class="ovGroup bookDeparture no_overflow"> <label for="bookDeparture" class="has_transition_1500 overlayLabel detailTitle cWhite top_single d300">departure <span class="icoContainer mobileHidden top_single has_transition_1500 d300"><img class="calendarIco" src="wp-content/themes/casangelina/assets/images/calendar.png"></span></label><input id="bookDeparture" class="cMarrone detailTitle top_single has_transition_1500 d400"></div><div class="ovGroup bookGuests no_overflow"> <label for="bookGuests" class="has_transition_1500 overlayLabel detailTitle cWhite top_single d500">guests <span class="icoContainer top_single has_transition_1500 d500"><span class="downArrow"></span></span></label> <select id="bookGuests" name="bookGuests" class="cMarrone detailTitle top_single has_transition_1500 d600"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>10+</option> </select></div><div id="bookSubmit" class="oButton whiteArrow has_transition_1500 top_ultralow d600" data-disabled="true"> <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> <defs> <path id="outerShape" stroke-width="1" d="M36.85,0L36.85,0L0,0v0v1V0.97h36.85V1c9.88,0,17.93,8.04,17.93,17.93c0,9.88-8.04,17.92-17.93,17.92v0.03H0v-0.03v1v0
+h36.85v0c10.44,0,18.93-8.49,18.93-18.92C55.78,8.49,47.29,0,36.85,0z"/> </defs> 
+<use x="0" y="0" xlink:href="#outerShape" /> </svg>
+<div class="oContent">
+    <div class="oBackground has_transition_1000 transition_all"></div>
+    <div class="oLabelContainer no_overflow">
+        <span class="oLabel top_hidden has_transition_1000 block cBrown d800 transition_all">submit</span>
+    </div>
+</div>
+        
+    <div class="oSymbol"> 
+        <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> <use x="0" y="0" xlink:href="#buttonArrow" /> 
+        </svg>
+    </div>
+</div> 
+
+<a class="ovGroup no_overflow leaders" target="_blank" href="">
+    <div class="ovSmall cMarrone no_overflow">
+        <span class="block has_transition_1500 top_single d700">Member of 
+            <img src="">? <br />Click 
+            <u>here</u> to enjoy enhanced stays and special benefits!
+        </span>  
+    </div> 
+</a>
+</div>
+</div>
+</aside>
+<aside class="overlay has_transition_1000" id="creditsOverlay">
+    <div class="mainBackground bTortora hidden has_transition_1000"></div>
+    <div class="overlayClose" id="creditsClose"> 
+        <svg class="circlePath" xmlns="http://www.w3.org/2000/svg">
+            <circle class="has_transition_1000_inout transition_all fillColor" cx="19" cy="19" r="18" stroke-width="1.3" fill="transparent"></circle>
+        </svg>
+        <div class="overlayCloseInner has_transition_1000"></div>
+    </div>
+    <div class="overlayContainer">
+        <div class="overlayTitle cWhite no_overflow detailTitle">
+            <span class="top_hidden block has_transition_1500 uppercase">Credits</span>
+        </div>
+
+        <div class="ovGroup no_overflow">
+            <div class="ovRole cWhite no_overflow text tech small">
+                <span class="block has_transition_1500 top_hidden d50">Content Management & Supervision</span>
+            </div>
+            <div class="ovPeople no_overflow cMarrone">
+                <span class="block has_transition_1500 top_hidden d100">Ms Annarita Aprea</span>
+            </div>
+            <div class="ovSmall cMarrone top_low has_transition_1500 d150">casa angelina director of sales&marketing</div>
+        </div>
+
+    <div class="ovGroup no_overflow">
+        <div class="ovRole cWhite no_overflow text tech small">
+            <span class="block has_transition_1500 top_hidden d200">Work Group Coordination</span>
+        </div>
+        <div class="ovPeople cMarrone no_overflow">
+            <span class="block has_transition_1500 top_hidden d250">Mr Domenico De Simone</span>
+        </div>
+        <div class="ovSmall cMarrone top_low has_transition_1500 d300">casa angelina managing director</div>
+    </div>
+<div class="ovGroup no_overflow">
+    <div class="ovRole cWhite no_overflow text tech small">
+        <span class="block has_transition_1500 top_hidden d350">Art Direction, Storytelling Web Design, UI/UX & Mobile Experience</span>
+    </div>
+    <div class="ovPeople cMarrone no_overflow">
+        <span class="block has_transition_1500 top_hidden d400">Mediasoul</span>
+    </div>
+</div>
+<div class="ovGroup no_overflow">
+    <div class="ovRole cWhite no_overflow text tech small">
+        <span class="block has_transition_1500 top_hidden d450">Photography</span>
+    </div>
+    <div class="ovPeople no_overflow cMarrone">
+        <span class="block has_transition_1500 top_hidden d500">Umberto D’Aniello, Gianni De Gennaro</span>
+    </div>
+</div>
+</div>
+</aside>
+<aside class="overlay has_transition_1000" id="thanksOverlay">
+    <div class="mainBackground bTortora hidden has_transition_1000"></div>
+    <div class="overlayClose" id="creditsClose"> 
+        <svg class="circlePath" xmlns="http://www.w3.org/2000/svg">
+            <circle class="has_transition_1000_inout transition_all fillColor" cx="19" cy="19" r="18" stroke-width="1.3" fill="transparent"></circle>
+        </svg>
+        <div class="overlayCloseInner has_transition_1000"></div>
+    </div>
+    <div class="overlayContainer">
+        <div class="overlayTitle cWhite no_overflow detailTitle">
+            <span class="top_hidden block has_transition_1500 uppercase">our special thanks go to</span>
+        </div>
+        <div class="ovGroup no_overflow">
+            <div class="ovSmall cMarrone top_low has_transition_1500 d100">All our Guests, loyal Travel Trade and Industry Partners, and the entire Casa Angelina Team who largely backed the project.</div>
+            <div class="ovPeople no_overflow cMarrone margin">
+                <span class="block has_transition_1500 top_hidden d200 uppercase">thank you</span>
+            </div>
+        </div>
+    </div>
+</aside>
+<div id="tracker" class="has_transition_400 mobileHidden">
+    <div id="simpleTrack" class="has_transition_800 bAlyssum no_opacity"></div>
+    <div id="navigationTrack" class="oButton top_ultralow has_transition_1500"> 
+        <svg class="oOuter has_transition_1000 fillColor transition_all" version="1.1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-1 -0.5 57.77 38.85" xml:space="preserve"> 
+            <use x="0" y="0" xlink:href="#outerShape" /> </svg>
+            <div class="oContent">
+                <div class="oBackground has_transition_1000 transition_all"></div>
+                <div class="oLabelContainer no_overflow">
+                    <span class="oLabel top_hidden has_transition_1000 block d200 transition_all">concept</span>
+                </div>
+            </div>
+
+            <div class="oSymbol has_transition_1000 d200"> 
+                <svg class="oArrow fillColor has_transition_1000 transition_all" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve"> 
+                    <use x="0" y="0" xlink:href="#buttonArrow" /> </svg>
+                </div>
+            </div>
+            <div id="actionTrack"> 
+                <svg class="oArrow fillColor has_transition_1000 transition_all no_opacity" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14.37 14.37" style="enable-background:new 0 0 14.37 14.37;" xml:space="preserve">
+                 <use x="0" y="0" xlink:href="#buttonArrow" /> 
+             </svg> 
+             <svg class="circlePath" xmlns="http://www.w3.org/2000/svg">
+                <circle class="has_transition_1000 transition_all fillColor" cx="19" cy="19" r="18" stroke-width="1.3" fill="transparent"></circle>
+            </svg>
+        </div>
+        <div class="loading has_transition_1000">
+            <svg>
+                <circle cx="15" cy="15" r="14" stroke-width="2" fill="transparent"></circle>
+            </svg>
+        </span>
+    </div>
+</div> 
+<!-- Google Tag Manager (noscript) --> <noscript>
+                
+<!-- <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8SX8KP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe> -->
+</noscript> <!-- End Google Tag Manager (noscript) -->
+<!-- <link rel='stylesheet' id='wpforms-choicesjs-css' href='wp-content/plugins/wpforms/assets/css/choices.min.css' type='text/css' media='all' /> -->
+
+<!-- <link rel='stylesheet' id='wpforms-smart-phone-field-css' href='wp-content/plugins/wpforms/pro/assets/css/vendor/intl-tel-input.min.css' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wpforms-dropzone-css' href='wp-content/plugins/wpforms/pro/assets/css/dropzone.min.css' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wpforms-jquery-timepicker-css' href='wp-content/plugins/wpforms/assets/css/jquery.timepicker.css' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wpforms-flatpickr-css' href='wp-content/plugins/wpforms/assets/css/flatpickr.min.css' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='wpforms-base-css' href='wp-content/plugins/wpforms/assets/css/wpforms-base.min.css' type='text/css' media='all' />  -->
+<script type='text/javascript' src='assets/js/wpascript.min.js' id='wpascript-js'></script> 
+<!-- <script type='text/javascript' id='wpascript-js-after'> wpa_field_info = {"wpa_field_name":"rkyobn9189","wpa_field_value":971378,"wpa_add_test":"no"} </script>  -->
+<script type='text/javascript' src='assets/js/locomotiveScroll.min.js' id='locomotiveScroll-js'></script> 
+<script type='text/javascript' src='assets/js/imagesLoaded.min.js' id='imagesLoaded-js'></script> 
+<script type='text/javascript' src='assets/js/day.min.js' id='day-js'></script> 
+<script type='text/javascript' src='assets/js/commons.min.js' id='commons-js'></script> 
+<script type='text/javascript' src='assets/js/wpforms-conditional-logic-fields.js'></script> 
+<script type='text/javascript' id='wpforms-choicesjs-js-extra'>
+// var wpforms_choicesjs_config = {"removeItemButton":"1","shouldSort":"","loadingText":"Loading...","noResultsText":"No results found.","noChoicesText":"No choices to choose from.","itemSelectText":"Press to select.","uniqueItemText":"Only unique values can be added.","customAddItemText":"Only values matching specific conditions can be added."};
+// /* ]]> */ </script> 
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/assets/js/choices.min.js' id='wpforms-choicesjs-js'></script> <script type='text/javascript' src='wp-content/plugins/wpforms/pro/assets/js/vendor/jquery.intl-tel-input.min.js' id='wpforms-smart-phone-field-js'></script>  -->
+<!-- <script type='text/javascript' id='wpforms-dropzone-js-extra'> /* <![CDATA[ */
+var wpforms_file_upload = {"url":"https:\/\/www.casangelina.com\/wp-admin\/admin-ajax.php","errors":{"file_not_uploaded":"This file was not uploaded.","file_limit":"File limit has been reached ({fileLimit}).","file_extension":"File type is not allowed.","file_size":"File exceeds the max size allowed.","post_max_size":"File exceeds the upload limit allowed (256 MB)."},"loading_message":"File upload is in progress. Please submit the form once uploading is completed."};
+/* ]]> */ </script>  -->
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/pro/assets/js/vendor/dropzone.min.js' id='wpforms-dropzone-js'></script>  -->
+<script type='text/javascript' src='assets/js/wpforms.js'></script> 
+<!-- <script type='text/javascript' src='wp-includes/js/underscore.min.js' id='underscore-js'></script>  -->
+<!-- <script type='text/javascript' id='wp-util-js-extra'> /* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */ </script>  -->
+<!-- <script type='text/javascript' src='wp-includes/js/wp-util.min.js' id='wp-util-js'></script>  -->
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/pro/assets/js/wpforms-file-upload.min.js' id='wpforms-file-upload-js'></script>  -->
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/assets/js/jquery.validate.min.js' id='wpforms-validation-js'></script>  -->
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/assets/js/flatpickr.min.js' id='wpforms-flatpickr-js'></script>  -->
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/assets/js/jquery.timepicker.min.js' id='wpforms-jquery-timepicker-js'></script>  -->
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/assets/js/jquery.inputmask.min.js' id='wpforms-maskedinput-js'></script>  -->
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/assets/js/mailcheck.min.js' id='wpforms-mailcheck-js'></script>  -->
+<!-- <script type='text/javascript' src='wp-content/plugins/wpforms/assets/js/jquery.payment.min.js' id='wpforms-payment-js'></script>  -->
+
+</body>
+<!-- Mirrored from www.casangelina.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 May 2023 12:18:48 GMT -->
+</html>
